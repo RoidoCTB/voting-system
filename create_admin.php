@@ -3,9 +3,9 @@
 include('db_connection.php'); 
 
 // run this file if you want to create admins (localhost/voting system/create_admin.php)
-$name = 'Lloyd';  // Set admin name
-$email = 'lloyd@gmail.com';  // Set admin email
-$password = 'headzhacke12';  // Set admin password
+$name = 'Admin';  // Set admin name
+$email = 'admin@gmail.com';  // Set admin email
+$password = 'admin123';  // Set admin password
 
 // Hash the password for security
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
