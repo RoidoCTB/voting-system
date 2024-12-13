@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php'); // Include your database connection
+include('db_connection.php');
 
 // Check if the user is logged in as admin
 if (!isset($_SESSION['admin_id'])) {
@@ -8,14 +8,12 @@ if (!isset($_SESSION['admin_id'])) {
     exit();
 }
 
-// Check if an ID was passed
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Delete candidate from the database
     $query = "DELETE FROM candidates WHERE id = '$id'";
     if (mysqli_query($conn, $query)) {
-        header("Location: manage_candidates.php"); // Redirect to candidates management page
+        header("Location: manage_candidates.php"); 
         exit();
     } else {
         echo "Error deleting candidate: " . mysqli_error($conn);

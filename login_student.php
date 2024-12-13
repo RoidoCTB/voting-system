@@ -5,7 +5,7 @@
 
 
 session_start();
-include('db_connection.php'); // Include your database connection
+include('db_connection.php'); 
 
 // Check if the student is already logged in
 if (isset($_SESSION['student_id'])) {

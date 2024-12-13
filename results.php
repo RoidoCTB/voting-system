@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php'); // Include your database connection
+include('db_connection.php');
 
 // Check if the user is logged in as admin
 if (!isset($_SESSION['admin_id'])) {
@@ -56,9 +56,9 @@ while ($row = mysqli_fetch_assoc($result_results)) {
 </head>
 <style>
     .total-votes-column {
-        width: 150px; /* Consistent column width */
-        text-align: center; /* Center horizontally */
-        vertical-align: middle; /* Center vertically */
+        width: 150px;
+        text-align: center; 
+        vertical-align: middle; 
     }
     .candidate-image {
         width: 50px;
@@ -66,10 +66,10 @@ while ($row = mysqli_fetch_assoc($result_results)) {
         border-radius: 50%;
     }
     table {
-        margin: auto; /* Center the table on the page */
+        margin: auto; 
     }
     td, th {
-        vertical-align: middle; /* Ensures text is vertically centered */
+        vertical-align: middle; 
     }
 </style>
 

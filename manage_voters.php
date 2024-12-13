@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php'); // Include your database connection
+include('db_connection.php');
 
 // Check if the user is logged in as admin
 if (!isset($_SESSION['admin_id'])) {

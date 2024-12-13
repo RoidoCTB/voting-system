@@ -1,10 +1,10 @@
--- Create the database
+
 CREATE DATABASE voting_system;
 
--- Use the database
+
 USE voting_system;
 
--- Create 'admins' table
+
 CREATE TABLE admins (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE admins (
     name VARCHAR(255) NOT NULL
 );
 
--- Create 'candidates' table
+
 CREATE TABLE candidates (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE candidates (
     category VARCHAR(255) NOT NULL
 );
 
--- Create 'students' table
+
 CREATE TABLE students (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     student_id VARCHAR(20) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE students (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create 'votes' table
+
 CREATE TABLE votes (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     student_id VARCHAR(20) NOT NULL,

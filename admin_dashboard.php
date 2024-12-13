@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php'); // Include your database connection
+include('db_connection.php'); 
 
 // Check if the user is logged in as admin
 if (!isset($_SESSION['admin_id'])) {
@@ -9,18 +9,18 @@ if (!isset($_SESSION['admin_id'])) {
 }
 
 // Fetch data for the dashboard (total voters and total candidates)
-$query_voters = "SELECT COUNT(*) AS total_voters FROM students"; // Change to 'students' table
-$query_candidates = "SELECT COUNT(*) AS total_candidates FROM candidates"; // Modify table name if needed
+$query_voters = "SELECT COUNT(*) AS total_voters FROM students"; 
+$query_candidates = "SELECT COUNT(*) AS total_candidates FROM candidates"; 
 
 $result_voters = mysqli_query($conn, $query_voters);
 $result_candidates = mysqli_query($conn, $query_candidates);
 
-// Check if the queries were successful
+
 if ($result_voters && $result_candidates) {
     $total_voters = mysqli_fetch_assoc($result_voters)['total_voters'];
     $total_candidates = mysqli_fetch_assoc($result_candidates)['total_candidates'];
 } else {
-    // Handle errors if queries fail
+
     $total_voters = 0;
     $total_candidates = 0;
 }
@@ -32,7 +32,6 @@ if ($result_voters && $result_candidates) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <!-- Bootstrap 4.5 CSS link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>

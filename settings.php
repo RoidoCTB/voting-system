@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connection.php'); // Include your database connection
+include('db_connection.php'); 
 
 // Check if the user is logged in as admin
 if (!isset($_SESSION['admin_id'])) {
@@ -9,7 +9,7 @@ if (!isset($_SESSION['admin_id'])) {
 }
 
 // Fetch admin details from the database
-$query_admin = "SELECT * FROM admins WHERE id = '{$_SESSION['admin_id']}'"; // Modify table name if needed
+$query_admin = "SELECT * FROM admins WHERE id = '{$_SESSION['admin_id']}'"; 
 $result_admin = mysqli_query($conn, $query_admin);
 $admin = mysqli_fetch_assoc($result_admin);
 

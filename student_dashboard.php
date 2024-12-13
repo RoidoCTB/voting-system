@@ -11,7 +11,7 @@ if (!isset($_SESSION['student_id'])) {
 $student_id = $_SESSION['student_id'];
 
 // Fetch student details
-$query = "SELECT * FROM students WHERE student_id = '$student_id'"; // Adjust table name if needed
+$query = "SELECT * FROM students WHERE student_id = '$student_id'"; 
 $result = mysqli_query($conn, $query);
 $student = mysqli_fetch_assoc($result);
 ?>
@@ -32,7 +32,7 @@ $student = mysqli_fetch_assoc($result);
         <h3>Voting Status</h3>
         <?php
         // Check if the student has voted
-        $vote_query = "SELECT * FROM votes WHERE student_id = '$student_id'"; // Adjust table name if needed
+        $vote_query = "SELECT * FROM votes WHERE student_id = '$student_id'"; 
         $vote_result = mysqli_query($conn, $vote_query);
         
         if (mysqli_num_rows($vote_result) > 0) {

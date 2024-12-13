@@ -1,6 +1,6 @@
 <?php
-include('db_connection.php'); // Your database connection
-include('auth.php'); // Include authentication check for students
+include('db_connection.php'); 
+include('auth.php'); 
 
 // Fetch candidates from the database for each category
 $query_president = "SELECT * FROM candidates WHERE category = 'President' AND status = 'active'";

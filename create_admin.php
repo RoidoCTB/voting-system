@@ -1,8 +1,8 @@
 <?php
-// Include the database connection
+
 include('db_connection.php'); 
 
-// Admin details
+// run this file if you want to create admins (localhost/voting system/create_admin.php)
 $name = 'Lloyd';  // Set admin name
 $email = 'lloyd@gmail.com';  // Set admin email
 $password = 'headzhacke12';  // Set admin password
@@ -20,7 +20,6 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-// Close the database connection
 mysqli_close($conn);
 ?>
 
